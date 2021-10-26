@@ -41,8 +41,3 @@ genTransform name targ types = do
 
 genSumType :: String -> Q [Name] -> Q [Dec]
 genSumType s n = n >>= constructSumType s defaultSumTypeOptions
-
-showInstances :: Name -> Q Exp
-showInstances typ = do
-  ins <- getConstructors typ
-  return . LitE . stringL $ show ins
