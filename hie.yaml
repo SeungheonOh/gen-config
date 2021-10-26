@@ -1,0 +1,10 @@
+cradle:
+  cabal:
+    - path: "src"
+      component: "lib:config-gen"
+
+    - path: "app/Main.hs"
+      component: "config-gen:exe:config-gen"
+
+    - path: "app/Template.hs"
+      component: "config-gen:exe:config-gen"
